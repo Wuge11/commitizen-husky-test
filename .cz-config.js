@@ -16,13 +16,13 @@ module.exports = {
     { value: 'build',    name: 'build:    打包' }
   ],
   // 消息步骤 
-  scopes: [{ name: 'accounts' }, { name: 'admin' }, { name: 'exampleScope' }, { name: 'changeMe' }],
+  // scopes: [{ name: 'accounts' }, { name: 'admin' }, { name: 'exampleScope' }, { name: 'changeMe' }],
   // override the messages, defaults are as follows
   messages: {
     type: '请选择提交类型(必填)',
-    scope: '\n请输入文件修改范围(可选)',
+    // scope: '\n请输入文件修改范围(可选)',
     // used if allowCustomScopes is true
-    customScope: '请输入文件修改范围',
+    // customScope: '请输入文件修改范围',
     subject: '请简要描述提交(必填)',
     body: '请输入详细描述(可选)',
     breaking: '列出任何BREAKING CHANGES(破坏性修改)(可选)',
@@ -30,6 +30,7 @@ module.exports = {
     confirmCommit: '确定提交此说明吗？'
   },
   allowCustomScopes: true,
+  skipEmptyScopes: true,
   allowBreakingChanges: ['feat', 'fix'], // 当提交类型为feat、fix时才有破坏性修改选项
   subjectLimit: 72
 }
